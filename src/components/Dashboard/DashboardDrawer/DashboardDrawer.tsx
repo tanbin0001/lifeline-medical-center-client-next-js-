@@ -48,6 +48,9 @@ export default function DashBoardDrawer({children}:{children:React.ReactNode}) {
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
+          background:"#F4F7FE",
+          boxShadow:0,
+          borderBottom:"1px solid lightgray"
         }}
       >
         <Toolbar>
@@ -56,13 +59,15 @@ export default function DashBoardDrawer({children}:{children:React.ReactNode}) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: 'none' } ,color:"primary.main"}}
           >
             <MenuIcon />
           </IconButton>
+          <Box variant="body2" noWrap component="div" color="gray">
           <Typography variant="h6" noWrap component="div">
-            Responsive drawer
+        Welcome
           </Typography>
+          </Box>
         </Toolbar>
       </AppBar>
       <Box
