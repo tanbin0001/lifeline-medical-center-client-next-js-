@@ -18,3 +18,8 @@ export interface DrawerItem {
   icon?:OverridableComponent<SvgIconTypeMap<{},"svg">>&{muiName:string};
   child?:DrawerItem[]
 }
+
+ export type ResponseSuccessType = {
+  data:any;
+  meta?:IMeta
+ }
