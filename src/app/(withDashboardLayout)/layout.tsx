@@ -1,7 +1,8 @@
-import DashboardDrawer from "@/components/Dashboard/DashboardDrawer/DashboardDrawer";
+import DashBoardDrawer from '@/components/Dashboard/DashboardDrawer/DashboardDrawer';
+import React from 'react';
 
-const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
-  return <DashboardDrawer>{children} </DashboardDrawer>;
+const DashBoardLayout = ({children}:{children:React.ReactNode}) => {
+  return <DashBoardDrawer>{children}</DashBoardDrawer>
 };
 
-export default DashboardLayout;
+export default DashBoardLayout;

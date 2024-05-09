@@ -64,7 +64,7 @@ const RegisterPage = () => {
         });
         if (result?.data?.accessToken) {
           storeUserInfo({ accessToken: result?.data?.accessToken });
-          router.push("/dashboard");
+          router.push("/");
         }
       }
     } catch (err: any) {
@@ -93,7 +93,7 @@ const RegisterPage = () => {
         >
           <Stack
             sx={{
-              justifyContent: "center", 
+              justifyContent: "center",
               alignItems: "center",
             }}
           >
