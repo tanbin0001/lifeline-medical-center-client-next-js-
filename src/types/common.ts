@@ -23,3 +23,5 @@ export interface DrawerItem {
   data:any;
   meta?:IMeta
  }
+ 
+export const Gender = ["MALE", "FEMALE"];

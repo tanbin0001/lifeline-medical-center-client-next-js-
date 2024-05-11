@@ -15,6 +15,9 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 const TopRatedDoctors = async () => {
   const res = await fetch("http://localhost:5000/api/v1/doctor?page=1&limit=3");
   const { data: doctors } = await res.json();
+  if (!doctors) {
+    return <div>Loading...</div>; // or any loading indicator you prefer
+  }
   console.log(doctors);
   //   console.log(doctors);
   return (
@@ -45,7 +48,7 @@ const TopRatedDoctors = async () => {
               <Card>
                 <Box>
                   <Image
-                    src={doctor.profilePhoto}
+                    src={doctor?.profilePhoto}
                     alt="doctor"
                     width={500}
                     height={100}
